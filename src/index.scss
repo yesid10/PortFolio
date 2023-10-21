@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Kaushan+Script&family=Oswald&display=swap');
+
+// Colores
+$darkreader-neutral-background: #212222;
+$darkreader-neutral-text: #eae3d9;
+$darkreader-selection-background: #165aaa;
+$darkreader-selection-text: #fbf5ec;
+$main-color: #252439;
+
+// Tipografia
+$font-family: "Inter",sans-serif;
+$font-family-extra: "DM Sans",sans-serif;
+$font-family-oswald: "Oswald",sans-serif;
+$font-family-kaushan: "Kaushan Script",cursive;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+    background-color: $main-color;
+    cursor: pointer;
+}
