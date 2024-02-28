@@ -8,10 +8,10 @@ $darkreader-selection-text: #fbf5ec;
 $main-color: #252439;
 
 // Tipografia
-$font-family: "Inter",sans-serif;
-$font-family-extra: "DM Sans",sans-serif;
-$font-family-oswald: "Oswald",sans-serif;
-$font-family-kaushan: "Kaushan Script",cursive;
+$font-family: "Inter", sans-serif;
+$font-family-extra: "DM Sans", sans-serif;
+$font-family-oswald: "Oswald", sans-serif;
+$font-family-kaushan: "Kaushan Script", cursive;
 
 * {
     margin: 0;
@@ -19,5 +19,14 @@ $font-family-kaushan: "Kaushan Script",cursive;
     box-sizing: border-box;
     font-family: $font-family;
     background-color: $main-color;
-    cursor: pointer;
 }
+
+html {
+    --cursor-color: #ffc448;
+    border-radius: 20px solid red !important;
+}
+
+html.dark-mode {
+    --cursor-color: #fff
+}
+
