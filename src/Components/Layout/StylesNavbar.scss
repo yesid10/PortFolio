@@ -21,6 +21,14 @@
                 font-weight: 500;
                 cursor: pointer;
             }
+
+            .li_selected {
+                border-bottom: 2px solid #fff;
+               transition: 2s ease-out;
+            }
+            
+             
+              
         }
     }
 

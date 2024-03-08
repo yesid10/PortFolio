@@ -4,22 +4,29 @@ import './index.scss';
 import AppRouter from './Routes/AppRouter.jsx'
 import AnimatedCursor from 'react-animated-cursor'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppRouter />
     <AnimatedCursor
-      innerSize={7}
-      outerSize={35}
-      innerScale={1}
-      outerScale={0.5}
-      outerAlpha={0}
-      innerAlpha = {0.5}
       hasBlendMode={true}
+      innerSize={8}
+      outerSize={30}
+      innerScale={8}
+      outerScale={
+        0
+      }
+      outerAlpha={
+        0
+      }
+
       innerStyle={{
-        backgroundColor: 'var(--cursor-color)'
+        backgroundColor: 'var(--cursor-color2)',
+        
       }}
       outerStyle={{
-        border: '3px solid var(--cursor-color)'
+        border: '2px solid var(--cursor-color)',
+
       }}
       clickables={[
         'a',
@@ -33,17 +40,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         'textarea',
         'button',
         '.link',
+        'li',
         {
-          target: '.custom',
+          target: '.li',
           options: {
-            innerSize: 12,
-            outerSize: 12,
-            color: '255, 255, 255',
-            outerAlpha: 0.3,
-            innerScale: 0.7,
-            outerScale: 5
+            innerSize: 30,
+            outerSize: 30,
+            color: '255, 0, 0',
+            outerAlpha: 1,
+            innerScale: 5,
+            outerScale: 5,
           }
+          
         }
+        
       ]}
     />
   </React.StrictMode>,

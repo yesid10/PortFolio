@@ -1,24 +1,32 @@
 import { Outlet } from "react-router-dom";
 import './StylesNavbar.scss'
+import { useState } from "react";
 
 const Navbar = () => {
+
+  const [styleLi, setStyleli] = useState(null);
+
+  const handleClick = (id) => {
+    setStyleli(id)
+  }
   return (
     <>
-        <div className="navbar">
-            <div>yesid</div>
-            <div className="navbar__menu">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Service</li>
-                    <li>Portfolio</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div>yesid</div>
+      <div className="navbar">
+        <div>yesid</div>
+        <div className="navbar__menu">
+          <ul>
+            <li onClick={() => handleClick(1)} className={styleLi === 1 ? 'li_selected' : ''}>Home</li>
+            <li onClick={ () => handleClick(2)} className={styleLi === 2 ? 'li_selected' : ''}>About</li>
+            <li onClick={ () => handleClick(3)} className={styleLi === 3 ? 'li_selected' : ''}>Service</li>
+            <li onClick={() => handleClick(4)} className={styleLi === 4 ? 'li_selected' : ''}>Portfolio</li>
+            <li onClick={ () => handleClick(5)} className={styleLi === 5 ? 'li_selected' : ''}>Blog</li>
+            <li onClick={ () => handleClick(6)} className={styleLi === 6 ? 'li_selected' : ''}>Contact</li>
+          </ul>
+
         </div>
-        <Outlet/>
+        <div>yesid</div>
+      </div>
+      <Outlet />
     </>
   )
 }

@@ -22,9 +22,12 @@ $font-family-kaushan: "Kaushan Script", cursive;
 }
 
 html {
-    --cursor-color: #ffc448;
-    border-radius: 20px solid red !important;
+    --cursor-color: #ffc54883;
+    --cursor-color2: #ffc548f4;
+
+    
 }
+
 
 html.dark-mode {
     --cursor-color: #fff
