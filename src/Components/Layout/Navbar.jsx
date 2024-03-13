@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Navbar = () => {
 
-  const [styleLi, setStyleli] = useState(null);
+  const [styleLi, setStyleli] = useState(1);
 
   const handleClick = (id) => {
     setStyleli(id)
@@ -12,7 +12,10 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div>yesid</div>
+        <figure className="navbar__logo">
+          <img src="https://orido-react.vercel.app/img/logo/light.png" alt="logo_yesid" />
+        </figure>
+       
         <div className="navbar__menu">
           <ul>
             <li onClick={() => handleClick(1)} className={styleLi === 1 ? 'li_selected' : ''}>Home</li>
@@ -24,7 +27,9 @@ const Navbar = () => {
           </ul>
 
         </div>
-        <div>yesid</div>
+        <div className="navbar__contacto">
+          <button>Contacto</button>
+        </div>
       </div>
       <Outlet />
     </>
