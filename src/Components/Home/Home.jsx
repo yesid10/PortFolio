@@ -4,15 +4,19 @@ import { SiGithub } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
 import "./StylesHome.scss"
 import fotoHojaVida from "../../assets/Diseño sin título.png";
+import logoVideo from '../../assets/Logo_video.png';
+import { FaPlay } from "react-icons/fa6";
+
 
 
 const Home = () => {
+
 
   return (
     <div className="home">
       <div className="home__info">
         <div>
-          <h1>Yesid Vanegas✌️</h1>
+          <h1>Yesid Vanegas ✌️</h1>
         </div>
         <div className="home__info__rol">
           <span></span>
@@ -40,11 +44,13 @@ const Home = () => {
 
       <div className="home__imagen">
         <figure>
-          <img src={fotoHojaVida} alt="yo" />
+          <img className="fotoPerfil" src={fotoHojaVida} alt="yo" />
         </figure>
 
-        <button>Bienvenidx a Yesid</button>
-
+        <img className="logoVideo" src={logoVideo} alt="video" />
+        <button className="buttonVideo"><FaPlay /></button>
+        
+       
       </div>
     </div>
   )
