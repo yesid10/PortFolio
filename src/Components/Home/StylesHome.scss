@@ -1,11 +1,12 @@
 @import "../../index.scss";
 
+
 .home {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 15% 0 12%;
+    padding: 0 15% 0 15%;
 
 
     &__info {
@@ -13,20 +14,19 @@
         flex-direction: column;
         width: 100%;
         margin-right: 20%;
+        margin-top: 5%;
 
         .name {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-top: 20%;
-
+            
             h3 {
-                font-size: 3.6rem;
+                font-size: 3.7rem;
                 font-family: $font-family-extra;
-                letter-spacing: 1px;
                 color: #fff;
-                font-weight: 600;
+                font-weight: 500;
             }
 
         }
@@ -35,7 +35,8 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            margin-top: 3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
             gap: 13%;
 
             .hello {
@@ -50,7 +51,6 @@
                 font-family: $font-family-extra;
                 font-size: 16px;
                 line-height: 28px;
-                letter-spacing: 1px;
                 border: none;
 
                 &:hover{
@@ -73,9 +73,7 @@
                 font-family: $font-family-extra;
                 font-weight: 700;
                 font-size: 16px;
-                letter-spacing: 1px;
                 position: relative;
-                overflow: hidden;
                 transition: color 0.3s ease;
 
                 &:before {
@@ -85,12 +83,12 @@
                     bottom: 0;
                     width: 0;
                     height: 1px;
-                    background: linear-gradient(to right, #f6f6f6, #f6f6f6); // Gradiente de izquierda a derecha
-                    transition: width 0.3s ease; // Añade una transición para la animación del ancho del borde
+                    background: linear-gradient(to right, #f6f6f6, #f6f6f6); 
+                    transition: width 0.3s ease; 
                 }
 
                 &:hover:before {
-                    width: 100%; // Cambia el ancho del borde al 100% en hover
+                    width: 100%; 
                 }
             }
         }
@@ -99,7 +97,7 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            margin: 2rem 0;
+            margin: 3rem 0;
             gap: 3.5%;
 
             p {
@@ -108,7 +106,7 @@
                 align-items: center;
                 color: #c4c4c4;
                 font-size: 15px;
-                font-weight: 600;
+                font-weight: 500;
                 font-family: $font-family;
             }
 
@@ -148,18 +146,19 @@
         &__rol {
             display: flex;
             align-items: center;
+            justify-content: start;
+            margin: 1rem 0;
 
             span {
                 display: flex;
-                padding-right: 5rem;
+                padding-right: 4rem;
                 border-top: 2px solid #fff;
-                margin-right: 3rem;
+                margin-right: 1rem;
             }
 
             h3 {
                 color: #fff;
                 font-size: 20px;
-                font-family: $font-family;
                 font-weight: 500;
             }
         }
@@ -168,6 +167,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 1rem 0;
+            
 
             p {
                 display: flex;
@@ -175,7 +176,9 @@
                 align-items: center;
                 color: #c4c4c4;
                 font-size: 15px;
-                font-family: $font-family;
+                font-family: Inter;
+                line-height: 30px;
+                font-weight: 400;
             }
         }
 

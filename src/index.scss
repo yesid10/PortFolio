@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Kaushan+Script&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Kaushan+Script&family=Oswald:wght@200..700&display=swap');
 
 // Colores
 $darkreader-neutral-background: #212222;
@@ -19,7 +19,9 @@ $font-family-kaushan: "Kaushan Script", cursive;
     box-sizing: border-box;
     font-family: $font-family;
     background-color: $main-color;
+    
 }
+
 
 html {
     --cursor-color: #ffc54883;
