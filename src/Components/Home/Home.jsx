@@ -17,7 +17,7 @@ const Home = () => {
     <div className="home">
       <div className="home__info">
         <div className="name">
-          <h1>Yesid Vanegas ✌️</h1>
+          <h3>Yesid Vanegas ✌️</h3>
         </div>
         <div className="home__info__rol">
           <span></span>
@@ -34,14 +34,14 @@ const Home = () => {
         </div>
         <div className="buttonsFollow">
           <p>Sigueme: </p>
-          <button><IoLogoLinkedin /></button>
-          <button><SiGithub /></button>
-          <button><FaInstagram /></button>
+          <button><IoLogoLinkedin className="redes" /></button>
+          <button><SiGithub className="redes" /></button>
+          <button><FaInstagram className="redes" /></button>
 
         </div>
-        <div>
-          <iframe style={{ border: 'none', width: '2.4rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json"></iframe>
-        </div>
+        
+          <iframe className="mouse" style={{ border: 'none', width: '1.5rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json">yesid</iframe>
+        
       </div>
 
       <div className="home__imagen">
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
         <div className="logoVideo">
           <img src={logoVideo} alt="video" />
-          <button className="buttonVideo"><FaPlay style={{ backgroundColor: 'black' }} /></button>
+          <button className="buttonVideo"><FaPlay style={{ backgroundColor: 'black', fontSize:'2rem' }} /></button>
         </div>
 
 

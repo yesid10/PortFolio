@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <figure className="navbar__logo">
-          <img src="https://orido-react.vercel.app/img/logo/light.png" alt="logo_yesid" />
+          <img src="https://orido-react.vercel.app/img/logo/light.png" alt="logo" />
         </figure>
        
         <div className="navbar__menu">

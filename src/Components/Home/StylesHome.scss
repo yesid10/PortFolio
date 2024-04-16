@@ -3,36 +3,42 @@
 .home {
     display: flex;
     width: 100%;
-  
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 18%;
-  
+    padding: 0 15% 0 12%;
+
+
     &__info {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        margin-right: 20%;
 
-        .name{
+        .name {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
+            margin-top: 20%;
 
-            h1{
-                display: flex;
-                font-size: 60px;
+            h3 {
+                font-size: 3.6rem;
+                font-family: $font-family-extra;
+                letter-spacing: 1px;
+                color: #fff;
+                font-weight: 600;
             }
 
         }
 
-        .buttonsWorks{
+        .buttonsWorks {
             display: flex;
             justify-content: start;
             align-items: center;
             margin-top: 3rem;
             gap: 13%;
 
-            .hello{
+            .hello {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -46,9 +52,18 @@
                 line-height: 28px;
                 letter-spacing: 1px;
                 border: none;
+
+                &:hover{
+                    background-color: #fff;
+                    color: #12141d;
+                    transition: all .3s ease;
+                }
+                &:not(:hover){
+                    transition: all .3s ease;
+                }
             }
 
-            .works{
+            .works {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -59,21 +74,76 @@
                 font-weight: 700;
                 font-size: 16px;
                 letter-spacing: 1px;
+                position: relative;
+                overflow: hidden;
+                transition: color 0.3s ease;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 1px;
+                    background: linear-gradient(to right, #f6f6f6, #f6f6f6); // Gradiente de izquierda a derecha
+                    transition: width 0.3s ease; // Añade una transición para la animación del ancho del borde
+                }
+
+                &:hover:before {
+                    width: 100%; // Cambia el ancho del borde al 100% en hover
+                }
             }
         }
-        .buttonsFollow{
+
+        .buttonsFollow {
             display: flex;
             justify-content: start;
             align-items: center;
             margin: 2rem 0;
+            gap: 3.5%;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #c4c4c4;
+                font-size: 15px;
+                font-weight: 600;
+                font-family: $font-family;
+            }
+
+            button {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: none;
+                background-color: #f6f6f6;
+                border-radius: 100%;
+                padding: 3.5% 3.5%;
+                cursor: pointer;
+
+                .redes {
+                    background-color: transparent;
+                    font-size: 1rem;
+
+                }
+
+                &:hover {
+                    background-color: #6244c5;
+                    transition: all .3s ease;
+
+                    .redes {
+                        color: #f6f6f6;
+                        font-weight: 600;
+                    }
+                }
+                &:not(:hover){
+                    transition: all .3s ease;
+                }
+            }
+
         }
 
-        h1 {
-            font-family: $font-family-extra;
-            font-size: 4.063rem;
-            letter-spacing: 2px;
-            color: #fff;
-        }
 
         &__rol {
             display: flex;
@@ -108,6 +178,17 @@
                 font-family: $font-family;
             }
         }
+
+        .mouse {
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            top: 82%;
+            left: 4.5%;
+
+
+
+        }
     }
 
     &__imagen {
@@ -117,15 +198,16 @@
 
         .fotoPerfil {
             display: flex;
-            img{
+
+            img {
                 display: flex;
                 width: 62.2vh;
-              
+
                 object-fit: contain;
-                
-                
+
+
             }
-            
+
         }
 
         .logoVideo {
@@ -133,42 +215,44 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            width: 150px;
-            height: 150px;
-            border-radius: 100px;
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
             position: absolute;
             top: 70%;
-            right: 14%;
-            
-            img{
-                width: 200px;
-            
+            right: 12%;
+            cursor: pointer;
+
+            img {
+                width: 150%;
+
                 object-fit: fill;
                 object-fit: cover;
-                animation: rotacion 170s linear infinite;
+                animation: rotacion 17s linear infinite;
+
                 @keyframes rotacion {
                     from {
-                        transform: rotate(3600deg);
+                        transform: rotate(360deg);
                     }
-    
+
                     to {
                         transform: rotate(0deg);
                     }
                 }
             }
 
-            
+
         }
 
-        .buttonVideo{
+        .buttonVideo {
             display: flex;
             justify-content: center;
             align-items: center;
             border: none;
-            width: 2rem;
             position: absolute;
             color: #c4c4c4;
-            font-size: 3rem;
+
+
         }
 
 

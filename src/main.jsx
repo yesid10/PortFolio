@@ -41,6 +41,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         'button',
         '.link',
         'li',
+        '.logoVideo',
         {
           target: '.li',
           options: {
