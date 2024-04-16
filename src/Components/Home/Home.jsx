@@ -29,17 +29,18 @@ const Home = () => {
           </p>
         </div>
         <div className="buttonsWorks">
-          <button className="hello">Say Hello <TbBrandTelegram style={{backgroundColor:'transparent', marginLeft:'10px', fontSize:'1.5rem'}}/></button>
-          <button className="works">My works < ImArrowUpRight2  style={{fontSize:'1.5rem', marginLeft:'10px'}} /> </button>
+          <button className="hello">Say Hello <TbBrandTelegram style={{ backgroundColor: 'transparent', marginLeft: '10px', fontSize: '1.5rem' }} /></button>
+          <button className="works">My works < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /> </button>
         </div>
         <div className="buttonsFollow">
           <p>Sigueme: </p>
           <button><IoLogoLinkedin /></button>
           <button><SiGithub /></button>
           <button><FaInstagram /></button>
-          <div>
-            <iframe style={{ border: 'none', width: '2.4rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json"></iframe>
-          </div>
+
+        </div>
+        <div>
+          <iframe style={{ border: 'none', width: '2.4rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json"></iframe>
         </div>
       </div>
 
@@ -49,7 +50,7 @@ const Home = () => {
         </div>
         <div className="logoVideo">
           <img src={logoVideo} alt="video" />
-          <button className="buttonVideo"><FaPlay /></button>
+          <button className="buttonVideo"><FaPlay style={{ backgroundColor: 'black' }} /></button>
         </div>
 
 
