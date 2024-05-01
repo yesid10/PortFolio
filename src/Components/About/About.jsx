@@ -16,13 +16,11 @@ const About = () => {
           your project a success. I enjoy every step of the design
           process, from discussion and collaboration.
         </p>
-        <div>
+        <div className="firma">
           <button>
             Descargar CV
           </button>
-
           <img src="https://orido-react.vercel.app/img/signature.png" alt="firma" />
-
         </div>
       </div>
     </div>

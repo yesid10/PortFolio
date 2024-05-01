@@ -1,17 +1,17 @@
-// @import "../../index.scss";
+ @import "../../index.scss";
 
 .about{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
+    flex-direction: row;
     height: 88.5vh;
     align-items: center;
     background-color: #6244c5;
-
+    gap: 10%;
+    padding: 0 20%;
     &__experiencia{
         display: flex;
-      
+        width: 100%;
         align-items: center;
         flex-direction: column;
         background-color: #ffc448;
@@ -20,13 +20,25 @@
     &__acercademi{
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
-        
+        width: 100%;
+     
 
+       
 
-        p{
+        .firma{
             display: flex;
-            width: 20%;
+            
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem 2.5rem;
+                background-color: $darkreader-neutral-text;
+                border-radius: 1rem;
+                border: none;
+            }
         }
     }
 }
