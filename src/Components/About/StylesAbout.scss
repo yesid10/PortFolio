@@ -7,37 +7,93 @@
     height: 88.5vh;
     align-items: center;
     background-color: #6244c5;
-    gap: 10%;
     padding: 0 20%;
     &__experiencia{
         display: flex;
-        width: 100%;
+        min-width: 30%;
+        height: 48vh;
         align-items: center;
         flex-direction: column;
         background-color: #ffc448;
-    }
+        padding-top: 28%;
+        margin-right: 25%;
+        margin-left: -5%;
+      
+
+        .years_experienci{
+            color: #6244c5;
+            margin-right: 1rem;
+            font-size: 21.3rem;
+            position: absolute;
+            bottom:20%;
+            font-family: $font-family-oswald;
+            // margin-top: -85px;
+        }
+        span{
+            color: #12141d;
+            font-size: 1.2rem;
+        }
+        .name{
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 17.3%;
+            color: #6244c5;
+            margin-top: 10%;
+            font-size: 2.2rem;
+        }   
+     }
 
     &__acercademi{
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        width: 100%;
-     
+        margin-right: 11%;
+        min-width: 50%;
+        
+        .figure{
+            position: absolute;
+            left: 42.5%;
+            top: 28%;
+        }
 
+        h3{
+            color: #fff;
+            font-size: 45px;
+            font-family: $font-family-extra;
+            margin-bottom: 2rem;
+            span{
+                border-bottom: 2px solid #fff;
+                padding-left: 30%;
+            }
+        }
+        p{
+            display: flex;
+            color: hsla(0, 0%, 100%, .7);
+            font-weight: 300;
+            line-height: 32px;
+        }
        
 
         .firma{
             display: flex;
-            
+            flex-direction: row;
+            gap: 10%;
+            margin-top: 2.5rem;
             button{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 1rem 2.5rem;
-                background-color: $darkreader-neutral-text;
+                padding: .8rem 2rem;
+                background-color: #fff;
+                color: $main-color;
                 border-radius: 1rem;
                 border: none;
+                font-weight: 700;
+                font-size: .999rem;
+                
+            }
+
+            img{
+                max-width: 160px;
             }
         }
     }
