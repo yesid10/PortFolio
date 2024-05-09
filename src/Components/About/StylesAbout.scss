@@ -114,5 +114,20 @@
         height: 88.5vh;
         justify-content: space-around;
         background-color: $main-color;
+
+        .experiencia{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .skills{
+            display: flex;
+           gap: 20%;
+           justify-content: center;
+           align-items: center;
+        }
     }
  }

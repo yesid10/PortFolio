@@ -2,8 +2,19 @@ import "./StylesAbout.scss";
 
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { ImArrowUpRight2 } from "react-icons/im";
+import { useState } from "react";
 
 const About = () => {
+
+  const [selectedSkills, setSlectedSkills] = useState(null);
+
+  const handleClickSkills = (menu) => {
+      if(menu === skills){
+        setSlectedSkills(skills);
+      }
+  }
+
+
   return (
     <div className="about__experiencia">
       <div className="about">
@@ -53,7 +64,7 @@ const About = () => {
       </div>
 
       <div className="areas_experiencia">
-        <div>
+        <div className="experiencia">
           <div>
             <h3>Mis areas de experiencia</h3>
             <span></span>
@@ -67,9 +78,9 @@ const About = () => {
             <button>Mi resumen <IoDocumentTextOutline style={{ fontSize: '1.5rem', fontWeight: '700', marginLeft: '.4rem' }} /></button>
           </div>
         </div>
-        <div>
+        <div className="skills">
           <div>
-            <button>Skills < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            <button onClick={setSlectedSkills(true)}>Skills < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
           </div>
           <div>
             <button>Experiencia < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
