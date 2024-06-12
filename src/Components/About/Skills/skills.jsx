@@ -1,7 +1,8 @@
+import './StylesSkills.scss'
 
 const Skills = () => {
   return (
-    <div>
+    <div className="SkillsFuction">
       Skills
     </div>
   )

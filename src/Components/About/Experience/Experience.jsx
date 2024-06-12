@@ -1,8 +1,11 @@
 
+import './StylesExperience.scss';
+
+
 const Experience = () => {
   return (
-    <div>
-      aca van las experiencias
+    <div className="experienciaFuction">
+     Experiencias
     </div>
   )
 }

@@ -1,9 +1,9 @@
-import React from 'react'
+import './StylesEducation.scss'
 
 const Education = () => {
   return (
-    <div>
-      aca va la Educacion
+    <div className='educationFuction'>
+      Educacion
     </div>
   )
 }
