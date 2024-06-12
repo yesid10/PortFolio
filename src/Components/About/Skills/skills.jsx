@@ -1,10 +1,10 @@
 
-const skills = () => {
+const Skills = () => {
   return (
     <div>
-      aca esta las experiencias
+      Skills
     </div>
   )
 }
 
-export default skills
+export default Skills

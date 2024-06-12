@@ -3,15 +3,16 @@ import "./StylesAbout.scss";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { useState } from "react";
+import Skills from "./Skills/skills";
+import Experience from "./Experience/Experience";
+import Education from "./Education/Education";
 
 const About = () => {
 
-  const [selectedSkills, setSlectedSkills] = useState(null);
+  const [selectedAreas, setSlectedAreas] = useState('skills');
 
-  const handleClickSkills = (menu) => {
-      if(menu === skills){
-        setSlectedSkills(skills);
-      }
+  const handleClickAreas = (menu) => {
+        setSlectedAreas(menu);
   }
 
 
@@ -80,13 +81,22 @@ const About = () => {
         </div>
         <div className="skills">
           <div>
-            <button onClick={setSlectedSkills(true)}>Skills < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            <button onClick={() => handleClickAreas('skills')} >Skills < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            {
+              selectedAreas === "skills" && <Skills/>
+            }
           </div>
           <div>
-            <button>Experiencia < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            <button  onClick={() => handleClickAreas('experience')}>Experiencia < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            {
+              selectedAreas === 'experience' && <Experience/>
+            }
           </div>
           <div>
-            <button>Educacion < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            <button  onClick={() => handleClickAreas('education')}>Educacion < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /></button>
+            {
+              selectedAreas === 'education' && <Education/>
+            }
           </div>
         </div>
       </div>
