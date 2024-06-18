@@ -116,7 +116,7 @@ const About = () => {
                 selectedAreas === "skills"
                   ? {
                       border: "1px solid #fff",
-                      padding: "1rem 2rem",
+                      padding: "1.1rem 2rem",
                       borderRadius: "15px",
                     }
                   : {}
@@ -136,7 +136,7 @@ const About = () => {
                 selectedAreas === "experience"
                   ? {
                       border: "1px solid #fff",
-                      padding: "1rem 2rem",
+                      padding: "1.1rem 2rem",
                       borderRadius: "15px",
                     }
                   : {}
@@ -156,7 +156,7 @@ const About = () => {
                 selectedAreas === "education"
                   ? {
                       border: "1px solid #fff",
-                      padding: "1rem 2rem",
+                      padding: "1.1rem 2rem",
                       borderRadius: "15px",
                     }
                   : {}
