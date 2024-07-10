@@ -1,0 +1,43 @@
+@import "../../../index.scss";
+
+
+.educationFuction{
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 4%;
+
+    .container{
+        display: flex;
+        gap: .7rem;
+        width: 50%;
+        margin-top: 2rem;
+        flex-direction: column;
+
+        span{
+            border-bottom: 2px solid #fff;
+            width: 7%;
+        }
+
+        .date{
+            color: #7953f8;
+            font-family: $font-family;
+            font-size: 17px;
+        }
+
+        .institution{
+            font-family: $font-family;
+            font-size: 18px;
+            width: 80%;
+        }
+        .grade{
+            color: #fff;
+            width: 80%;
+            font-weight: 700;
+            font-family: $font-family-extra;
+            font-size: 19px;
+            
+        }
+    }
+}

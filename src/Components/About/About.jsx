@@ -3,9 +3,8 @@ import "./StylesAbout.scss";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { useState } from "react";
-import Skills from "./Skills/skills";
-import Experience from "./Experience/Experience";
-import Education from "./Education/Education";
+import Skills from "./Skills/Skills";
+import RepeatComponent from "./educ-exp/RepeatComponent";
 
 const About = () => {
   const [selectedAreas, setSlectedAreas] = useState("skills");
@@ -13,6 +12,42 @@ const About = () => {
   const handleClickAreas = (menu) => {
     setSlectedAreas(menu);
   };
+
+  const infoExperience = [
+    {
+      id: 1,
+      title: "Desarrollador Frontend training",
+      institution: "Makaia.org",
+      date: "2023",
+    },
+    {
+      id: 2,
+      title: "Soporte Tecnico",
+      institution: "Venta Equipos Bogota",
+      date: "2021",
+    }
+  ]
+
+  const infoEducation = [
+    {
+      id: 1,
+      title: "Ingenieria de Sistemas",
+      institution: "Universidad Industrial de Santander",
+      date: "2021 - Actualidad",
+    },
+    {
+      id: 2,
+      title: "Desarrollador web Frontend",
+      institution: "Makaia.org",
+      date: "2023 - 2023",
+    },
+    {
+      id: 3,
+      title: "Técnico en Sistemas",
+      institution: "Servicio Nacional de Aprendizaje (SENA)",
+      date: "2018 - 2019",
+    }
+  ]
 
   return (
     <div className="about__experiencia">
@@ -147,7 +182,7 @@ const About = () => {
                 style={{ fontSize: "1.5rem", marginLeft: "10px" }}
               />
             </button>
-            {selectedAreas === "experience" && <Experience />}
+            {selectedAreas === "experience" && <RepeatComponent info={infoExperience} />}
           </div>
           <div>
             <button
@@ -167,7 +202,7 @@ const About = () => {
                 style={{ fontSize: "1.5rem", marginLeft: "10px" }}
               />
             </button>
-            {selectedAreas === "education" && <Education />}
+            {selectedAreas === "education" && <RepeatComponent info={infoEducation}/>}
           </div>
         </div>
       </div>
