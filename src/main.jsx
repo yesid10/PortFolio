@@ -13,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       innerSize={8}
       outerSize={30}
       innerScale={8}
+      
+      showSystemCursor={true}
       outerScale={
         0
       }

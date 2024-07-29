@@ -57,9 +57,7 @@ const Service = () => {
             ))
         }
       </div>
-      {/* <Button type="primary" onClick={() => setOpen(true)}>
-        Open Modal of 1000px width
-      </Button> */}
+      
       <Modal
         centered
         open={open}
