@@ -1,0 +1,18 @@
+.portfolio{
+    background-color: #ffc448;
+   
+
+    &__carousel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            width:60rem;
+            
+            object-fit: contain;
+        }
+        
+    }
+}
