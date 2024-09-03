@@ -11,20 +11,24 @@ import ImageSpace from "../../assets/space.png";
 import ImageTesla from "../../assets/tesla.png";
 import ImageVideotube from "../../assets/videoTube.png";
 import StylesPortfolio from "./StylesPortfolio.scss"
+import { useNavigate } from 'react-router-dom';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import './styles.css';
 
 
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 
 const Portfolio = () => {
-
-    const contentStyle = {
-        margin: 0,
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-    };
 
     const worksPortfolio = [
         {
@@ -67,6 +71,7 @@ const Portfolio = () => {
             image: ImageRappi,
             deployment: 'vercel',
             title: 'Rappi',
+            link: 'https://sprint-4-rappi.firebaseapp.com/'
         },
         {
             id: 7,
@@ -103,33 +108,49 @@ const Portfolio = () => {
             title: 'YouTube',
             link: ''
         }
-    ]
+    ];
 
+    const handleNavigateProyect = (id) => {
+        const idFind = worksPortfolio.find(proyect => proyect.id === id);
+        if(idFind?.link){
+           window.open(idFind.link, '_blank');
+        }
+    };
 
     return (
         <div className='portfolio'>
-            <h3></h3>
-            <Carousel
-                autoplay
-                arrows
-                infinite
-                adaptiveHeight
-                fade
-                
-            >
-                {
-                    worksPortfolio?.map((work) => (
-                        <div style={{margin:'0 20rem'}}>
-                            <a href={work.link} target="_blank" className='portfolio__carousel' key={work.id}>
-                                <img src={work.image} alt={work.title} />
-                                <h3>{work.title}</h3>
-                            </a>
-                        </div>
-
-                    ))
-                }
-
-            </Carousel>
+            <div>
+                <h3>Mira mi proyectos recientes:
+                    <span></span>
+                </h3>
+            </div>
+            <div>
+                <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    pagination={true}
+                    modules={[EffectCoverflow, Pagination]}
+                    className="mySwiper"
+                >
+                    
+                    {
+                        worksPortfolio?.map((work) => (
+                            <SwiperSlide onClick={() => handleNavigateProyect(work.id)} key={work.id}>
+                                <img src={work.image} />
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+            </div>
         </div>
     )
 }

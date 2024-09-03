@@ -1,8 +1,8 @@
-#app { height: 20% }
+#app { height: 100% }
 html,
 body {
   position: relative;
-  height: 20%;
+  height: 100%;
 }
 
 body {
@@ -30,28 +30,4 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
-}
-
-
-.portfolio{
-    background-color: #ffc448;
-
-    &__photos{
-        display: flex;
-        margin-bottom: 2rem;
-    }
-   
-
-    &__carousel{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        img{
-            width:60rem;
-            object-fit: contain;
-        }
-        
-    }
 }
