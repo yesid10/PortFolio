@@ -20,7 +20,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import './styles.css';
 
 
@@ -34,77 +33,77 @@ const Portfolio = () => {
         {
             id: 1,
             image: imageVuelos,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Vuelos',
             link: ''
         },
         {
             id: 2,
             image: imageCine,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Cine',
             link: ''
         },
         {
             id: 3,
             image: ImageLoop,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Loop',
             link: 'https://modulo2-workshop2-tbj7.vercel.app/'
         },
         {
             id: 4,
             image: ImageMarketplace,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Marketplace',
             link: ''
         },
         {
             id: 5,
             image: ImagePizaa,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Pizza',
             link: 'https://work-shop2-seprint3.vercel.app/'
         },
         {
             id: 6,
             image: ImageRappi,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Rappi',
             link: 'https://sprint-4-rappi.firebaseapp.com/'
         },
         {
             id: 7,
             image: ImageSga,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Sistema de gestion de alumnos',
             link: ''
         },
         {
             id: 8,
             image: ImageSnap,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Snap',
             link: ''
         },
         {
             id: 9,
             image: ImageSpace,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Space',
             link: 'https://workshop-space-tau.vercel.app/'
         },
         {
             id: 10,
             image: ImageTesla,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'Tesla',
             link: ''
         },
         {
             id: 11,
             image: ImageVideotube,
-            deployment: 'vercel',
+            deployment: 'Vercel',
             title: 'YouTube',
             link: ''
         }
@@ -112,19 +111,21 @@ const Portfolio = () => {
 
     const handleNavigateProyect = (id) => {
         const idFind = worksPortfolio.find(proyect => proyect.id === id);
-        if(idFind?.link){
-           window.open(idFind.link, '_blank');
+        if (idFind?.link) {
+            window.open(idFind.link, '_blank');
         }
     };
 
     return (
         <div className='portfolio'>
-            <div>
-                <h3>Mira mi proyectos recientes:
+            <div className='portfolio__title'>
+                <h3>Mira mis mas</h3>
+                <div className='titledos'>
+                    <h3>recientes proyectos</h3>
                     <span></span>
-                </h3>
+                </div>
             </div>
-            <div>
+            <div className='portfolio__slider'>
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -141,11 +142,13 @@ const Portfolio = () => {
                     modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"
                 >
-                    
+
                     {
                         worksPortfolio?.map((work) => (
-                            <SwiperSlide onClick={() => handleNavigateProyect(work.id)} key={work.id}>
+                            <SwiperSlide className='siliderProjects' onClick={() => handleNavigateProyect(work.id)} key={work.id}>
                                 <img src={work.image} />
+                                <span>{work.deployment}</span>
+                                <h3>{work.title}</h3>
                             </SwiperSlide>
                         ))
                     }

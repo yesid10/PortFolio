@@ -4,7 +4,7 @@ body {
   position: relative;
   height: 100%;
 }
-
+/* 
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -12,22 +12,23 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-}
+} */
 
 .swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 70%;
+
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 45%;
+  height: 45%;
 }
 
 .swiper-slide img {
-  display: block;
+ display: block;
   width: 100%;
 }
