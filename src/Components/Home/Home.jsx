@@ -39,9 +39,9 @@ const Home = () => {
           <button><FaInstagram className="redes" /></button>
 
         </div>
-        
-          <iframe className="mouse" style={{ border: 'none', width: '1.5rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json">yesid</iframe>
-        
+
+        <iframe className="mouse" style={{ border: 'none', width: '1.5rem', padding: "0", margin: '0' }} src="https://lottie.host/embed/1a15d0e4-e3bd-4e81-ad5c-e5afcc0f783f/ldhHOvz4WO.json">yesid</iframe>
+
       </div>
 
       <div className="home__imagen">
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
         <div className="logoVideo">
           <img src={logoVideo} alt="video" />
-          <button className="buttonVideo"><FaPlay style={{ backgroundColor: 'black', fontSize:'2rem' }} /></button>
+          <button className="buttonVideo"><FaPlay style={{ backgroundColor: 'black', fontSize: '2rem' }} /></button>
         </div>
 
 

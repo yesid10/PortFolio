@@ -1,0 +1,154 @@
+@import "../../index.scss";
+
+
+
+.Contact {
+    background-color: #12141d;
+
+    &__main {
+
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+
+        .logoVideo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+
+            cursor: pointer;
+
+            img {
+                width: 150%;
+                margin-left: 2rem;
+                animation: rotacion 17s linear infinite;
+
+                @keyframes rotacion {
+                    from {
+                        transform: rotate(360deg);
+                    }
+
+                    to {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            width: 30%;
+            flex-direction: column;
+            color: #fdfdfd;
+            text-align: justify;
+
+            span{
+                font-size: 48px;
+                margin-bottom: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-family: $font-family-extra;
+            }
+
+            p {
+                color: hsla(0, 0%, 100%, .7);
+                font-family: $font-family;
+                letter-spacing: 2px;
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 30px;
+                
+            }
+        }
+
+        .hello {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            background-color: #6244c5;
+            font-weight: 700;
+            color: #fdfdfd;
+            font-family: $font-family-extra;
+            font-size: 16px;
+            line-height: 28px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+                color: #12141d;
+                transition: all 0.3s ease;
+            }
+
+            &:not(:hover) {
+                transition: all 0.3s ease;
+            }
+        }
+
+    }
+
+    &__footer{
+
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .buttonsFollow {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 3rem 0;
+            gap: 3.5%;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #c4c4c4;
+                font-size: 15px;
+                font-weight: 500;
+                font-family: $font-family;
+            }
+
+            button {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: none;
+                background-color: #f6f6f6;
+                border-radius: 100%;
+                padding: 3.5% 3.5%;
+                cursor: pointer;
+
+                .redes {
+                    background-color: transparent;
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    background-color: #6244c5;
+                    transition: all 0.3s ease;
+
+                    .redes {
+                        color: #f6f6f6;
+                        font-weight: 600;
+                    }
+                }
+
+                &:not(:hover) {
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+
+}
