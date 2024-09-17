@@ -10,15 +10,16 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
-
+        align-items: center;
+        padding: 6rem 7rem 0 7rem;
 
         .logoVideo {
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            width: 130px;
-            height: 130px;
+            width: 180px;
+            height: 180px;
             border-radius: 100%;
 
             cursor: pointer;
@@ -44,7 +45,7 @@
             display: flex;
             justify-content: start;
             align-items: start;
-            width: 30%;
+            width: 40%;
             flex-direction: column;
             color: #fdfdfd;
             text-align: justify;
@@ -60,10 +61,10 @@
             p {
                 color: hsla(0, 0%, 100%, .7);
                 font-family: $font-family;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
                 font-size: 1rem;
                 font-weight: 300;
-                line-height: 30px;
+                line-height: 25px;
                 
             }
         }
@@ -72,7 +73,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1rem 1.5rem;
+            padding: 1.2rem 1.5rem;
             border-radius: 16px;
             background-color: #6244c5;
             font-weight: 700;
@@ -99,8 +100,37 @@
     &__footer{
 
         display: flex;
+        padding: 8rem 0;
+        gap: 15rem;
         width: 100%;
         justify-content: space-around;
+        align-items: center;
+
+        .redes{
+            display: flex;
+            gap: 1.5rem;
+            color: #fff;
+
+            span{
+                color: #bebdc4;
+                font-size: 16px;
+            }
+            p{
+                font-size: 25px;
+                font-weight: 500;
+                font-family: $font-family-extra ;
+            }
+        }
+
+        .buttonVideo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            position: absolute;
+            z-index: 100;
+            color: black;
+        }
 
         .buttonsFollow {
             display: flex;

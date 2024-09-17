@@ -38,14 +38,14 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className="Contact__footer">
-                <div>
+                <div className="redes">
                     <div>
                         <span>Call:</span>
                         <p>+57 (311) 859 9554</p>
                     </div>
                     <div>
                         <span>Email:</span>
-                        <p>yesidvanegas68@.com</p>
+                        <p>yesidvanegas68@gmail.com</p>
                     </div>
                 </div>
                 <div className="buttonsFollow">
