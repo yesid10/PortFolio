@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./StylesServices.scss";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { Button, Modal } from 'antd';
-import { info } from "sass";
 
 const Service = () => {
   const services = [
@@ -51,7 +50,7 @@ const Service = () => {
               <span>0{service.id}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              < ImArrowUpRight2 style={{ fontSize: '20rem', height: '2rem', color: '#98a5ff' }} />
+              <ImArrowUpRight2 style={{ fontSize: '20rem', height: '2rem', color: '#98a5ff' }} />
             </div>
           ))
         }

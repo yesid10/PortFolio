@@ -4,12 +4,12 @@ const RepeatComponent = ({info}) => {
   return (
 
     <div className='educationFuction'>
-      {info?.map((info) => (
-        <div className="container">
-            <p className="date">{info.date}</p>
-            <p className="institution">{info.institution}</p>
+      {info?.map((item) => (
+        <div key={item.id} className="container">
+            <p className="date">{item.date}</p>
+            <p className="institution">{item.institution}</p>
             <span></span>
-            <p className="grade">{info.title}</p>
+            <p className="grade">{item.title}</p>
         </div>
       ))}
       

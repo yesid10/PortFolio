@@ -7,10 +7,10 @@ import Skills from "./Skills/Skills";
 import RepeatComponent from "./educ-exp/RepeatComponent";
 
 const About = () => {
-  const [selectedAreas, setSlectedAreas] = useState("skills");
+  const [selectedAreas, setSelectedAreas] = useState("skills");
 
   const handleClickAreas = (menu) => {
-    setSlectedAreas(menu);
+    setSelectedAreas(menu);
   };
 
   const infoExperience = [

@@ -25,12 +25,12 @@ const Home = () => {
         </div>
         <div className="home__info__description">
           <p>
-            I`m creative designer based in New York, and I`m very passionate and dedicated to my work.
+            I'm creative designer based in New York, and I'm very passionate and dedicated to my work.
           </p>
         </div>
         <div className="buttonsWorks">
           <button className="hello">Say Hello <TbBrandTelegram style={{ backgroundColor: 'transparent', marginLeft: '10px', fontSize: '1.5rem' }} /></button>
-          <button className="works">My works < ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /> </button>
+          <button className="works">My works <ImArrowUpRight2 style={{ fontSize: '1.5rem', marginLeft: '10px' }} /> </button>
         </div>
         <div className="buttonsFollow">
           <p>Sigueme: </p>

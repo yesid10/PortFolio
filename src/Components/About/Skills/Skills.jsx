@@ -6,7 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const Skills = () => {
 
-  const arrarKills = [
+  const arraySkills = [
     {
       id: 1,
       icon: <AiOutlineHtml5 style={{color:'#252439'}}/>,
@@ -54,7 +54,7 @@ const Skills = () => {
   return (
     <div className="SkillsFuction">
       {
-        arrarKills?.map(skill => (
+        arraySkills?.map(skill => (
           <div className='icons' key={skill.id}>
             <span className='iconFigure'>{skill.icon}</span>
             <span className='info'>{skill.name} <span style={{fontWeight:'700'}}>({skill.xp})</span></span> 
