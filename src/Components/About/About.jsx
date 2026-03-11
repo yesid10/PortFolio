@@ -52,7 +52,7 @@ const About = () => {
   return (
     <div className="about__experiencia">
       <div className="about">
-        <div className="about__experiencia">
+        <div className="about__container_exp">
           <h3 className="years_experienci">01</h3>
           <span>Año de experiencia</span>
           <h3 className="name">Yesid Vanegas</h3>

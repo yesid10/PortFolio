@@ -12,47 +12,46 @@
 
      .about {
          display: flex;
+         gap: 20%;
          width: 100%;
          flex-direction: row;
          height: 88.5vh;
+         justify-content: center;
          align-items: center;
          background-color: #6244c5;
-         padding: 0 20%;
 
-         &__experiencia {
+         &__container_exp {
              display: flex;
-             min-width: 30%;
-             height: 48vh;
+             min-width: clamp(250px, 20vw, 350px);
+             min-height: clamp(350px, 50vh, 500px);
+             justify-content: center;
              align-items: center;
              flex-direction: column;
              background-color: #ffc448;
-             padding-top: 28%;
-             margin-right: 25%;
-             margin-left: -5%;
+             padding: 2rem;
+             border-radius: 0;
 
 
              .years_experienci {
                  color: #6244c5;
-                 margin-right: 1rem;
-                 font-size: 21.3rem;
-                 position: absolute;
-                 bottom: 20%;
+                 font-size: clamp(6rem, 12vw, 21.3rem);
+                 line-height: 1;
+                 margin: 0;
                  font-family: $font-family-oswald;
-                 // margin-top: -85px;
              }
 
              span {
                  color: #12141d;
-                 font-size: 1.2rem;
+                 font-size: clamp(0.9rem, 2vw, 1.2rem);
+                 margin-top: 0.5rem;
              }
 
              .name {
                  text-transform: uppercase;
-                 position: absolute;
-                 bottom: 17.3%;
-                 color: #6244c5;
-                 margin-top: 10%;
-                 font-size: 2.2rem;
+                 color: #090611;
+                 font-size: clamp(1.2rem, 3vw, 2.2rem);
+                 margin-top: 0.5rem;
+                 text-align: center;
              }
          }
 
@@ -119,10 +118,14 @@
 
      .areas_experiencia {
          display: flex;
+         flex-direction: row;
          width: 100%;
-         height: 100vh;
-         justify-content: space-around;
+         min-height: 100vh;
+         justify-content: space-between;
+         align-items: center;
          background-color: $main-color;
+         position: relative;
+         padding: 0 2rem;
 
          .experiencia {
              display: flex;
@@ -132,78 +135,418 @@
              width: 28%;
 
              .title_experience {
-                 
-                h3{
-                    color: #fff;
-                    font-size: 3rem;
-                }
-                    span {
-                        border-bottom: 2px solid #fff;
-                        padding-left: 20%;
-                    }
-                 
-             }
-             .texto{
-                display: flex;
-                flex-direction: column;
 
-                p{
-                    margin-top: 2rem;
-                    line-height: 26px;
-                }
+                 h3 {
+                     color: #fff;
+                     font-size: 3rem;
+                 }
+
+                 span {
+                     border-bottom: 2px solid #fff;
+                     padding-left: 20%;
+                 }
+
              }
 
-             .resumen{
-                button{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 1rem 1.5rem;
-                    margin: 3rem 15rem 0 0;
-                    border-radius: 16px;
-                    background-color: #6244c5;
-                    font-weight: 700;
-                    color: #fdfdfd;
-                    font-family: $font-family-extra;
-                    font-size: 16px;
-                    line-height: 28px;
-                    border: none;
-    
-                    &:hover{
-                        background-color: #fff;
-                        color: #12141d;
-                        transition: all .3s ease;
-                    }
-                    &:not(:hover){
-                        transition: all .3s ease;
-                    }
-                }
+             .texto {
+                 display: flex;
+                 flex-direction: column;
+
+                 p {
+                     margin-top: 2rem;
+                     line-height: 26px;
+                 }
+             }
+
+             .resumen {
+                 button {
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     padding: 1rem 1.5rem;
+                     margin: 3rem 15rem 0 0;
+                     border-radius: 16px;
+                     background-color: #6244c5;
+                     font-weight: 700;
+                     color: #fdfdfd;
+                     font-family: $font-family-extra;
+                     font-size: 16px;
+                     line-height: 28px;
+                     border: none;
+
+                     &:hover {
+                         background-color: #fff;
+                         color: #12141d;
+                         transition: all .3s ease;
+                     }
+
+                     &:not(:hover) {
+                         transition: all .3s ease;
+                     }
+                 }
              }
          }
 
          .divSkills {
              display: flex;
-             justify-content: center;
+             position: absolute;
+             right: 8%;
+             top: 50%;
+             transform: translateY(-50%);
              gap: 10%;
-             margin: 12% 5% 0 0;
+             flex-direction: row;
+             width: auto;
+             z-index: 10;
 
-             button {
+             > div {
                  display: flex;
-                 justify-content: center;
+                 flex-direction: column;
                  align-items: center;
-                 background-color: transparent;
-                 padding: 1.1rem 2rem;
-                 border: none;
-                 color: #fff;
-                 font-size: 1rem;
-                 
-                
-                 &:hover {
-                     border: 1px solid #fff;
-                     border-radius: 15px;
-                     
+                 gap: 0.5rem;
+
+                 button {
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     background-color: transparent;
+                     padding: 1.1rem 2rem;
+                     border: none;
+                     color: #fff;
+                     font-size: 1rem;
+                     cursor: pointer;
+                     white-space: nowrap;
+
+                     &:hover {
+                         border: 1px solid #fff;
+                         border-radius: 15px;
+                     }
+                 }
+
+                 > div:not(button) {
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     min-height: 250px;
+                     min-width: 280px;
+                     padding: 2rem;
+                     margin-top: 1rem;
                  }
              }
+         }
+     }
+
+     // Estilos para componentes de contenido
+     .SkillsFuction {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1.5rem;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         padding: 2rem;
+
+         .icons {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             gap: 0.5rem;
+             min-width: 100px;
+
+             .iconFigure {
+                 font-size: 2.5rem;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+             }
+
+             .info {
+                 text-align: center;
+                 font-size: 0.95rem;
+                 color: #c4c4c4;
+             }
+         }
+     }
+
+     .educationFuction {
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
+         width: 100%;
+         padding: 2rem;
+
+         .container {
+             display: flex;
+             flex-direction: column;
+             gap: 0.5rem;
+             border-left: 3px solid #6244c5;
+             padding-left: 1.5rem;
+             padding-bottom: 1.5rem;
+
+             .date {
+                 font-size: 0.85rem;
+                 color: #98a5ff;
+                 font-weight: 700;
+             }
+
+             .institution {
+                 font-size: 0.9rem;
+                 color: #f0f0f0;
+             }
+
+             .grade {
+                 font-size: 1rem;
+                 color: #fff;
+                 font-weight: 600;
+             }
+
+             span {
+                 display: block;
+                 height: 2px;
+                 background-color: #6244c5;
+                 margin-top: 0.5rem;
+             }
+         }
+     }
+
+     // Media Queries para Responsividad
+     @media (max-width: 1024px) {
+         .about {
+             gap: 10%;
+             height: auto;
+             flex-direction: column;
+             padding: 2rem 1rem;
+
+             &__container_exp {
+                 min-width: clamp(200px, 30vw, 300px);
+                 min-height: clamp(300px, 40vh, 400px);
+             }
+
+             &__acercademi {
+                 margin-right: 0;
+                 min-width: 100%;
+
+                 .figure {
+                     position: relative;
+                     left: auto;
+                     top: auto;
+                     margin-bottom: 1rem;
+                 }
+             }
+         }
+
+         .areas_experiencia {
+             flex-direction: column;
+             align-items: flex-start;
+             min-height: auto;
+             padding: 2rem;
+             position: relative;
+
+             .experiencia {
+                 width: 100%;
+                 margin-left: 0;
+                 margin-bottom: 2rem;
+             }
+
+             .divSkills {
+                 position: static;
+                 transform: none;
+                 width: 100%;
+                 flex-direction: row;
+                 justify-content: center;
+                 gap: 5%;
+                 z-index: 1;
+                 margin-top: 2rem;
+
+                 > div {
+                     min-width: auto;
+
+                     > div:not(button) {
+                         min-height: 200px;
+                         min-width: 250px;
+                     }
+                 }
+             }
+         }
+     }
+
+     @media (max-width: 768px) {
+         .about {
+             gap: 5%;
+             padding: 1rem;
+
+             &__container_exp {
+                 min-width: clamp(150px, 40vw, 250px);
+                 min-height: clamp(250px, 35vh, 350px);
+
+                 .years_experienci {
+                     font-size: clamp(4rem, 10vw, 8rem);
+                 }
+
+                 span {
+                     font-size: clamp(0.8rem, 1.5vw, 1rem);
+                 }
+
+                 .name {
+                     font-size: clamp(1rem, 2.5vw, 1.5rem);
+                 }
+             }
+
+             &__acercademi {
+                 h3 {
+                     font-size: clamp(1.8rem, 5vw, 3rem);
+                 }
+                 p {
+                     font-size: clamp(0.9rem, 2vw, 1rem);
+                 }
+             }
+         }
+
+         .areas_experiencia {
+             .experiencia {
+                 padding: 1rem;
+
+                 .title_experience h3 {
+                     font-size: clamp(1.5rem, 4vw, 2.5rem);
+                 }
+
+                 .texto p {
+                     font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+                 }
+
+                 .resumen button {
+                     padding: 0.7rem 1rem;
+                     margin: 1rem 0 0 0;
+                     font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+                 }
+             }
+
+             .divSkills {
+                 position: static;
+                 transform: none;
+                 width: 100%;
+                 gap: 5%;
+                 margin: 1rem 0 0 0;
+                 padding: 0 1rem;
+                 flex-direction: row;
+                 justify-content: center;
+
+                 > div button {
+                     padding: 0.8rem 1.2rem;
+                     font-size: 0.9rem;
+                 }
+             }
+         }
+
+         .SkillsFuction {
+             gap: 1rem;
+             padding: 1rem;
+
+             .icons {
+                 min-width: 80px;
+
+                 .iconFigure {
+                     font-size: 2rem;
+                 }
+
+                 .info {
+                     font-size: 0.85rem;
+                 }
+             }
+         }
+
+         .educationFuction {
+             gap: 1rem;
+             padding: 1rem;
+
+             .container {
+                 padding-left: 1rem;
+                 padding-bottom: 1rem;
+
+                 .date {
+                     font-size: 0.75rem;
+                 }
+
+                 .institution {
+                     font-size: 0.8rem;
+                 }
+
+                 .grade {
+                     font-size: 0.9rem;
+                 }
+             }
+         }
+     }
+
+     @media (max-width: 480px) {
+         .about__experiencia {
+             padding-top: 80px;
+         }
+
+         .about {
+             height: auto;
+             padding: 1rem;
+
+             &__container_exp {
+                 min-width: 100vw;
+                 min-height: 250px;
+                 margin: -1rem -1rem 1rem -1rem;
+
+                 .years_experienci {
+                     font-size: clamp(3rem, 8vw, 5rem);
+                 }
+             }
+
+             &__acercademi {
+                 h3 {
+                     font-size: 1.5rem;
+                 }
+
+                 p {
+                     font-size: 0.85rem;
+                 }
+             }
+         }
+
+         .areas_experiencia {
+             .experiencia {
+                 width: 100%;
+                 margin: 0;
+                 padding: 1rem 0.5rem;
+
+                 .title_experience h3 {
+                     font-size: 1.3rem;
+                 }
+
+                 .texto {
+                     display: none;
+                 }
+
+                 .resumen button {
+                     display: none;
+                 }
+             }
+
+             .divSkills {
+                 position: static;
+                 transform: none;
+                 width: 100%;
+                 flex-direction: column;
+                 gap: 1rem;
+                 margin: 1rem 0 0 0;
+                 padding: 0;
+                 justify-content: center;
+
+                 > div {
+                     width: 100%;
+                     align-items: center;
+                 }
+             }
+         }
+
+         .SkillsFuction,
+         .educationFuction {
+             gap: 0.8rem;
+             padding: 1rem 0.5rem;
          }
      }
  }

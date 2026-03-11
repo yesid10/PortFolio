@@ -3,19 +3,19 @@
 
 .SkillsFuction {
     display: flex;
-    width: 40%;
-    margin-top: 2rem;
+    width: 100%;
+    margin: 0;
     flex-wrap: wrap;
-    position: absolute;
-    height: 10%;
-    right: 8%;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 
 
     .icons {
         display: flex;
-        width: 20%;
         flex-direction: column;
-        margin: 1rem 2.5rem;
+        align-items: center;
+        gap: 0.8rem;
 
 
         .iconFigure {
@@ -26,7 +26,7 @@
             align-items: center;
             font-size: 2.1rem;
             background-color: #fff;
-            border-radius: 50px;
+            border-radius: 50%;
 
         }
 
@@ -34,7 +34,43 @@
             font-family: $font-family-extra ;
             color: #fff;
             font-size: 16px;
-            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .SkillsFuction {
+        gap: 1rem;
+
+        .icons {
+            .iconFigure {
+                font-size: 1.8rem;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .info {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .SkillsFuction {
+        gap: 0.8rem;
+
+        .icons {
+            .iconFigure {
+                font-size: 1.5rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            .info {
+                font-size: 12px;
+            }
         }
     }
 }
