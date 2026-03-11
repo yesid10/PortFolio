@@ -24,10 +24,17 @@ $font-family-kaushan: "Kaushan Script", cursive;
 html {
     --cursor-color: #ffc548ab;
     --cursor-color2: #ffc54857;
+    scroll-behavior: smooth;
 }
 
 html.dark-mode {
     --cursor-color: #fff
+}
+
+.section {
+    min-height: 100vh;
+    padding-top: 80px;
+    width: 100%;
 }
 
 

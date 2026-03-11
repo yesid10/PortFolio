@@ -1,79 +1,105 @@
-import { Link, Outlet } from "react-router-dom";
 import "./StylesNavbar.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [isSelected, setIsSelected] = useState(1);
-
-  const handleClickSetStyle = (id) => {
-    setIsSelected(id);
-  };
+  const [activeSection, setActiveSection] = useState("home");
 
   const listNavbar = [
     {
       id: 1,
       name: "Home",
-      path: "/",
+      sectionId: "home",
     },
     {
       id: 2,
       name: "About",
-      path: "/about",
+      sectionId: "about",
     },
     {
       id: 3,
       name: "Service",
-      path: "/service",
+      sectionId: "service",
     },
     {
       id: 4,
       name: "Portfolio",
-      path: "/portfolio",
+      sectionId: "portfolio",
     },
     {
       id: 5,
       name: "Blog",
-      path: "/",
+      sectionId: "home",
     },
     {
       id: 6,
       name: "Contact",
-      path: "/contact",
+      sectionId: "contact",
     },
   ];
-  return (
-    <>
-      <div className="navbar">
-        <figure className="navbar__logo">
-          <img
-            src="https://orido-react.vercel.app/img/logo/light.png"
-            alt="logo"
-          />
-        </figure>
 
-        <div className="navbar__menu">
-          <ul>
-            {/* <li onClick={() => handleClick(1)} className={styleLi === 1 ? 'li_selected' : ''}>Home</li>
-            <li onClick={ () => handleClick(2)} className={styleLi === 2 ? 'li_selected' : ''}>About</li>
-            <li onClick={ () => handleClick(3)} className={styleLi === 3 ? 'li_selected' : ''}>Service</li>
-            <li onClick={() => handleClick(4)} className={styleLi === 4 ? 'li_selected' : ''}>Portfolio</li>
-            <li onClick={ () => handleClick(5)} className={styleLi === 5 ? 'li_selected' : ''}>Blog</li>
-            <li onClick={ () => handleClick(6)} className={styleLi === 6 ? 'li_selected' : ''}>Contact</li> */}
-            {listNavbar?.map((item) => (
-              <li key={item.id} onClick={() => handleClickSetStyle(item.id)}>
-                <Link to={item.path} style={{borderBottom: isSelected === item.id ? '2px solid #fff' : 'none'}}>
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="navbar__contacto">
-          <button>Contacto</button>
-        </div>
+  // Intersection Observer para detectar sección visible
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observar todas las secciones
+    const sections = document.querySelectorAll("section, main");
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
+
+  // Scroll suave al hacer click en un link
+  const handleNavClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="navbar">
+      <figure className="navbar__logo">
+        <img
+          src="https://orido-react.vercel.app/img/logo/light.png"
+          alt="logo"
+        />
+      </figure>
+
+      <div className="navbar__menu">
+        <ul>
+          {listNavbar?.map((item) => (
+            <li 
+              key={item.id} 
+              onClick={() => handleNavClick(item.sectionId)}
+              style={{ borderBottom: activeSection === item.sectionId ? '2px solid #fff' : 'none' }}
+            >
+              <a href={`#${item.sectionId}`} onClick={(e) => e.preventDefault()}>
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <Outlet />
-    </>
+      <div className="navbar__contacto">
+        <button onClick={() => handleNavClick("contact")}>Contacto</button>
+      </div>
+    </div>
   );
 };
 
