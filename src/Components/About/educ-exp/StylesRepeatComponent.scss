@@ -2,9 +2,9 @@
 
 
 .educationFuction {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
 
@@ -12,8 +12,6 @@
         display: flex;
         flex-direction: column;
         gap: .7rem;
-        width: 100%;
-        max-width: 500px;
         padding: 1.5rem;
         border-left: 3px solid #6244c5;
         padding-left: 1.5rem;
@@ -49,46 +47,30 @@
 
 @media (max-width: 768px) {
     .educationFuction {
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
 
         .container {
-            width: 100%;
             padding: 1rem;
 
-            .date {
-                font-size: 15px;
-            }
-
-            .institution {
-                font-size: 16px;
-            }
-
-            .grade {
-                font-size: 17px;
-            }
+            .date { font-size: 15px; }
+            .institution { font-size: 16px; }
+            .grade { font-size: 17px; }
         }
     }
 }
 
 @media (max-width: 480px) {
     .educationFuction {
+        grid-template-columns: 1fr;
         gap: 0.8rem;
 
         .container {
             padding: 1rem 0.8rem;
-            max-width: 100%;
 
-            .date {
-                font-size: 13px;
-            }
-
-            .institution {
-                font-size: 14px;
-            }
-
-            .grade {
-                font-size: 15px;
-            }
+            .date { font-size: 13px; }
+            .institution { font-size: 14px; }
+            .grade { font-size: 15px; }
         }
     }
 }

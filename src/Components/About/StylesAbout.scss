@@ -1,581 +1,340 @@
- @import "../../index.scss";
-
-
-
- .about__experiencia {
-     display: flex;
-     flex-direction: column;
-     color: #bebdc4;
-     min-height: 100vh;
-
-
-     .about {
-         display: flex;
-         width: 100%;
-         flex-direction: row;
-         min-height: 88.5vh;
-         justify-content: center;
-         align-items: center;
-         background-color: #6244c5;
-         padding: 2rem;
-         gap: 5%;
-
-         &__container_exp {
-             display: flex;
-             min-width: clamp(250px, 20vw, 350px);
-             min-height: clamp(350px, 50vh, 500px);
-             justify-content: center;
-             align-items: center;
-             flex-direction: column;
-             background-color: #ffc448;
-             padding: 2rem;
-             border-radius: 0;
-             flex-shrink: 0;
-             border-radius: 3rem 1rem 2rem 1.5rem;
-             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
-             .years_experienci {
-                 color: #6244c5;
-                 font-size: clamp(6rem, 12vw, 21.3rem);
-                 line-height: 1;
-                 margin: 0;
-                 font-family: $font-family-oswald;
-             }
-
-             span {
-                 color: #12141d;
-                 font-size: clamp(0.9rem, 2vw, 1.2rem);
-                 margin-top: 0.5rem;
-             }
-
-             .name {
-                 text-transform: uppercase;
-                 color: #090611;
-                 font-size: clamp(1.2rem, 3vw, 2.2rem);
-                 margin-top: 0.5rem;
-                 text-align: center;
-             }
-         }
-
-         &__acercademi {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: flex-start;
-             min-width: 45%;
-             max-width: 600px;
-
-             .figure {
-                 position: absolute;
-                 left: 42.5%;
-                 top: 28%;
-             }
-
-             h3 {
-                 color: #fff;
-                 font-size: 45px;
-                 font-family: $font-family-extra;
-                 margin-bottom: 2rem;
-
-                 span {
-                     border-bottom: 2px solid #fff;
-                     padding-left: 20%;
-                 }
-             }
-
-             p {
-                 display: flex;
-                 color: hsla(0, 0%, 100%, .7);
-                 font-weight: 300;
-                 line-height: 32px;
-             }
-
-
-             .firma {
-                 display: flex;
-                 flex-direction: row;
-                 gap: 10%;
-                 margin-top: 2.5rem;
-
-                 button {
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     padding: .8rem 2rem;
-                     background-color: #fff;
-                     color: $main-color;
-                     border-radius: 1rem;
-                     border: none;
-                     font-weight: 700;
-                     font-size: .999rem;
-
-                 }
-
-                 img {
-                     max-width: 160px;
-                 }
-             }
-         }
-     }
-
-
-
-     .areas_experiencia {
-         display: flex;
-         flex-direction: row;
-         width: 100%;
-         min-height: 100vh;
-         justify-content: space-between;
-         align-items: center;
-         background-color: $main-color;
-         position: relative;
-         padding: 0 2rem;
-
-         .experiencia {
-             display: flex;
-             justify-content: center;
-             margin-left: 10%;
-             flex-direction: column;
-             width: 28%;
-
-             .title_experience {
-
-                 h3 {
-                     color: #fff;
-                     font-size: 3rem;
-                 }
-
-                 span {
-                     border-bottom: 2px solid #fff;
-                     padding-left: 20%;
-                 }
-
-             }
-
-             .texto {
-                 display: flex;
-                 flex-direction: column;
-
-                 p {
-                     margin-top: 2rem;
-                     line-height: 26px;
-                 }
-             }
-
-             .resumen {
-                 button {
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     padding: 1rem 1.5rem;
-                     margin: 3rem 15rem 0 0;
-                     border-radius: 16px;
-                     background-color: #6244c5;
-                     font-weight: 700;
-                     color: #fdfdfd;
-                     font-family: $font-family-extra;
-                     font-size: 16px;
-                     line-height: 28px;
-                     border: none;
-
-                     &:hover {
-                         background-color: #fff;
-                         color: #12141d;
-                         transition: all .3s ease;
-                     }
-
-                     &:not(:hover) {
-                         transition: all .3s ease;
-                     }
-                 }
-             }
-         }
-
-         .divSkills {
-             display: flex;
-             position: absolute;
-             right: 8%;
-             top: 50%;
-             transform: translateY(-50%);
-             gap: 10%;
-             flex-direction: row;
-             width: auto;
-             z-index: 10;
-
-             >div {
-                 display: flex;
-                 flex-direction: column;
-                 align-items: center;
-                 gap: 0.5rem;
-
-                 button {
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     background-color: transparent;
-                     padding: 1.1rem 2rem;
-                     border: none;
-                     color: #fff;
-                     font-size: 1rem;
-                     cursor: pointer;
-                     white-space: nowrap;
-
-                     &:hover {
-                         border: 1px solid #fff;
-                         border-radius: 15px;
-                     }
-                 }
-
-                 >div:not(button) {
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     min-height: 250px;
-                     min-width: 280px;
-                     padding: 2rem;
-                     margin-top: 1rem;
-                 }
-             }
-         }
-     }
-
-     // Estilos para componentes de contenido
-     .SkillsFuction {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 1.5rem;
-         justify-content: center;
-         align-items: center;
-         width: 100%;
-         padding: 2rem;
-
-         .icons {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 0.5rem;
-             min-width: 100px;
-
-             .iconFigure {
-                 font-size: 2.5rem;
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-             }
-
-             .info {
-                 text-align: center;
-                 font-size: 0.95rem;
-                 color: #c4c4c4;
-             }
-         }
-     }
-
-     .educationFuction {
-         display: flex;
-         flex-direction: column;
-         gap: 1.5rem;
-         width: 100%;
-         padding: 2rem;
-
-         .container {
-             display: flex;
-             flex-direction: column;
-             gap: 0.5rem;
-             border-left: 3px solid #6244c5;
-             padding-left: 1.5rem;
-             padding-bottom: 1.5rem;
-
-             .date {
-                 font-size: 0.85rem;
-                 color: #98a5ff;
-                 font-weight: 700;
-             }
-
-             .institution {
-                 font-size: 0.9rem;
-                 color: #f0f0f0;
-             }
-
-             .grade {
-                 font-size: 1rem;
-                 color: #fff;
-                 font-weight: 600;
-             }
-
-             span {
-                 display: block;
-                 height: 2px;
-                 background-color: #6244c5;
-                 margin-top: 0.5rem;
-             }
-         }
-     }
-
-     // Media Queries para Responsividad
-     @media (max-width: 1024px) {
-         .about {
-             gap: 5%;
-             min-height: auto;
-             flex-direction: column;
-             padding: 2rem 1rem;
-             justify-content: center;
-             align-items: center;
-
-             &__container_exp {
-                 min-width: clamp(200px, 30vw, 300px);
-                 min-height: clamp(300px, 40vh, 400px);
-                 margin-bottom: 2rem;
-             }
-
-             &__acercademi {
-                 width: 100%;
-                 max-width: 600px;
-                 min-width: auto;
-                 justify-content: center;
-
-                 .figure {
-                     position: relative;
-                     left: auto;
-                     top: auto;
-                     margin-bottom: 1rem;
-                 }
-             }
-         }
-
-         .areas_experiencia {
-             flex-direction: column;
-             align-items: flex-start;
-             min-height: auto;
-             padding: 2rem;
-             position: relative;
-
-             .experiencia {
-                 width: 100%;
-                 margin-left: 0;
-                 margin-bottom: 2rem;
-             }
-
-             .divSkills {
-                 position: static;
-                 transform: none;
-                 width: 100%;
-                 flex-direction: row;
-                 justify-content: center;
-                 gap: 5%;
-                 z-index: 1;
-                 margin-top: 2rem;
-
-                 >div {
-                     min-width: auto;
-
-                     >div:not(button) {
-                         min-height: 200px;
-                         min-width: 250px;
-                     }
-                 }
-             }
-         }
-     }
-
-     @media (max-width: 768px) {
-         .about {
-             flex-direction: column;
-             gap: 3%;
-             padding: 1rem;
-             justify-content: center;
-             align-items: center;
-
-             &__container_exp {
-                 min-width: clamp(150px, 40vw, 250px);
-                 min-height: clamp(250px, 35vh, 350px);
-                 margin-bottom: 1rem;
-
-                 .years_experienci {
-                     font-size: clamp(4rem, 10vw, 8rem);
-                 }
-
-                 span {
-                     font-size: clamp(0.8rem, 1.5vw, 1rem);
-                 }
-
-                 .name {
-                     font-size: clamp(1rem, 2.5vw, 1.5rem);
-                 }
-             }
-
-             &__acercademi {
-                 width: 100%;
-                 max-width: 600px;
-                 min-width: auto;
-                 justify-content: center;
-
-                 h3 {
-                     font-size: clamp(1.8rem, 5vw, 3rem);
-                 }
-
-                 p {
-                     font-size: clamp(0.9rem, 2vw, 1rem);
-                 }
-             }
-         }
-
-         .areas_experiencia {
-             .experiencia {
-                 padding: 1rem;
-
-                 .title_experience h3 {
-                     font-size: clamp(1.5rem, 4vw, 2.5rem);
-                 }
-
-                 .texto p {
-                     font-size: clamp(0.85rem, 1.5vw, 0.95rem);
-                 }
-
-                 .resumen button {
-                     padding: 0.7rem 1rem;
-                     margin: 1rem 0 0 0;
-                     font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-                 }
-             }
-
-             .divSkills {
-                 position: static;
-                 transform: none;
-                 width: 100%;
-                 gap: 5%;
-                 margin: 1rem 0 0 0;
-                 padding: 0 1rem;
-                 flex-direction: row;
-                 justify-content: center;
-
-                 >div button {
-                     padding: 0.8rem 1.2rem;
-                     font-size: 0.9rem;
-                 }
-             }
-         }
-
-         .SkillsFuction {
-             gap: 1rem;
-             padding: 1rem;
-
-             .icons {
-                 min-width: 80px;
-
-                 .iconFigure {
-                     font-size: 2rem;
-                 }
-
-                 .info {
-                     font-size: 0.85rem;
-                 }
-             }
-         }
-
-         .educationFuction {
-             gap: 1rem;
-             padding: 1rem;
-
-             .container {
-                 padding-left: 1rem;
-                 padding-bottom: 1rem;
-
-                 .date {
-                     font-size: 0.75rem;
-                 }
-
-                 .institution {
-                     font-size: 0.8rem;
-                 }
-
-                 .grade {
-                     font-size: 0.9rem;
-                 }
-             }
-         }
-     }
-
-     @media (max-width: 480px) {
-         .about__experiencia {
-             padding-top: 80px;
-         }
-
-         .about {
-             flex-direction: column;
-             height: auto;
-             padding: 1rem;
-             justify-content: center;
-             align-items: center;
-             gap: 2rem;
-
-             &__container_exp {
-                 min-width: 100%;
-                 min-height: 250px;
-                 margin: 0;
-
-                 .years_experienci {
-                     font-size: clamp(3rem, 8vw, 5rem);
-                 }
-             }
-
-             &__acercademi {
-                 width: 100%;
-                 min-width: auto;
-                 max-width: 100%;
-                 justify-content: center;
-                 align-items: center;
-
-                 h3 {
-                     font-size: 1.5rem;
-                 }
-
-                 p {
-                     font-size: 0.85rem;
-                 }
-             }
-         }
-
-         .areas_experiencia {
-             .experiencia {
-                 width: 100%;
-                 margin: 0;
-                 padding: 1rem 0.5rem;
-
-                 .title_experience h3 {
-                     font-size: 1.3rem;
-                 }
-
-                 .texto {
-                     display: none;
-                 }
-
-                 .resumen button {
-                     display: none;
-                 }
-             }
-
-             .divSkills {
-                 position: static;
-                 transform: none;
-                 width: 100%;
-                 flex-direction: column;
-                 gap: 1rem;
-                 margin: 1rem 0 0 0;
-                 padding: 0;
-                 justify-content: center;
-
-                 >div {
-                     width: 100%;
-                     align-items: center;
-                 }
-             }
-         }
-
-         .SkillsFuction,
-         .educationFuction {
-             gap: 0.8rem;
-             padding: 1rem 0.5rem;
-         }
-     }
- }
+@import "../../index.scss";
+
+.about__experiencia {
+    display: flex;
+    flex-direction: column;
+    color: #bebdc4;
+    min-height: 100vh;
+
+    .about {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        min-height: 88.5vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #6244c5;
+        padding: 2rem;
+        gap: 5%;
+
+        &__container_exp {
+            display: flex;
+            min-width: clamp(250px, 20vw, 350px);
+            min-height: clamp(350px, 50vh, 500px);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #ffc448;
+            padding: 2rem;
+            flex-shrink: 0;
+            border-radius: 3rem 1rem 2rem 1.5rem;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+            .years_experienci {
+                color: #6244c5;
+                font-size: clamp(6rem, 12vw, 21.3rem);
+                line-height: 1;
+                margin: 0;
+                font-family: $font-family-oswald;
+            }
+
+            span {
+                color: #12141d;
+                font-size: clamp(0.9rem, 2vw, 1.2rem);
+                margin-top: 0.5rem;
+            }
+
+            .name {
+                text-transform: uppercase;
+                color: #090611;
+                font-size: clamp(1.2rem, 3vw, 2.2rem);
+                margin-top: 0.5rem;
+                text-align: center;
+            }
+        }
+
+        &__acercademi {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-width: 45%;
+            max-width: 600px;
+
+            .figure {
+                position: absolute;
+                left: 42.5%;
+                top: 28%;
+            }
+
+            h3 {
+                color: #fff;
+                font-size: 45px;
+                font-family: $font-family-extra;
+                margin-bottom: 2rem;
+
+                span {
+                    border-bottom: 2px solid #fff;
+                    padding-left: 20%;
+                }
+            }
+
+            p {
+                display: flex;
+                color: hsla(0, 0%, 100%, .7);
+                font-weight: 300;
+                line-height: 32px;
+            }
+
+            .firma {
+                display: flex;
+                flex-direction: row;
+                gap: 10%;
+                margin-top: 2.5rem;
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: .8rem 2rem;
+                    background-color: #fff;
+                    color: $main-color;
+                    border-radius: 1rem;
+                    border: none;
+                    font-weight: 700;
+                    font-size: .999rem;
+                }
+
+                img {
+                    max-width: 160px;
+                }
+            }
+        }
+    }
+
+    // ─── SECCIÓN PRINCIPAL CORREGIDA ───────────────────────────────────────
+    .areas_experiencia {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        background-color: $main-color;
+        padding: 2rem 3rem;
+        gap: 3rem;
+
+        // Columna izquierda — título, tabs, texto, botón
+        .experiencia {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 40%;
+            max-width: 500px;
+
+
+
+            .title_experience {
+                h3 {
+                    color: #fff;
+                    font-size: clamp(1.8rem, 3vw, 3rem);
+                    margin-bottom: 1.5rem;
+
+                    span {
+                        border-bottom: 2px solid #fff;
+                        padding-left: 20%;
+                    }
+                }
+            }
+
+            .texto {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    margin-top: 1.5rem;
+                    line-height: 26px;
+                }
+            }
+
+            .resumen {
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem 1.5rem;
+                    margin: 3rem 0 0 0;
+                    border-radius: 16px;
+                    background-color: #6244c5;
+                    font-weight: 700;
+                    color: #fdfdfd;
+                    font-family: $font-family-extra;
+                    font-size: 16px;
+                    line-height: 28px;
+                    border: none;
+                    width: fit-content;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #12141d;
+                        transition: all .3s ease;
+                    }
+
+                    &:not(:hover) {
+                        transition: all .3s ease;
+                    }
+                }
+            }
+        }
+
+        // Columna derecha — contenido dinámico (Skills / Educación / Experiencia)
+        .columna_contenido {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+
+            .tabs_experiencia {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    background: transparent;
+                    color: #fff;
+                    border: 1px solid transparent;
+                    border-radius: 15px;
+                    padding: 0.7rem 1.2rem;
+                    font-size: 1rem;
+                    font-family: $font-family-extra;
+                    cursor: pointer;
+                    transition: border .2s;
+
+                    &.active {
+                        border: 1px solid #fff;
+                        background: rgba(98, 68, 197, 0.1);
+                    }
+                }
+            }
+
+            .contenido_tabs {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    // ─── TABS ──────────────────────────────────────────────────────────────
+
+
+    // ─── MEDIA QUERIES ─────────────────────────────────────────────────────
+    @media (max-width: 1024px) {
+        .about {
+            flex-direction: column;
+            min-height: auto;
+            padding: 2rem 1rem;
+
+            &__container_exp {
+                min-width: clamp(200px, 30vw, 300px);
+                min-height: clamp(300px, 40vh, 400px);
+                margin-bottom: 2rem;
+            }
+
+            &__acercademi {
+                width: 100%;
+                max-width: 600px;
+                min-width: auto;
+
+                .figure {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .areas_experiencia {
+            flex-direction: column;
+            min-height: auto;
+            padding: 2rem;
+            gap: 2rem;
+
+            .experiencia {
+                flex: 1;
+                max-width: 100%;
+            }
+
+            .columna_contenido {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about {
+            flex-direction: column;
+            padding: 1rem;
+
+            &__container_exp {
+                min-width: clamp(150px, 40vw, 250px);
+                min-height: clamp(250px, 35vh, 350px);
+
+                .years_experienci {
+                    font-size: clamp(4rem, 10vw, 8rem);
+                }
+
+                .name {
+                    font-size: clamp(1rem, 2.5vw, 1.5rem);
+                }
+            }
+
+            &__acercademi {
+                h3 {
+                    font-size: clamp(1.8rem, 5vw, 3rem);
+                }
+
+                p {
+                    font-size: clamp(0.9rem, 2vw, 1rem);
+                }
+            }
+        }
+
+        .areas_experiencia {
+            padding: 1.5rem;
+
+            .experiencia {
+                .title_experience h3 {
+                    font-size: clamp(1.5rem, 4vw, 2.5rem);
+                }
+
+                .texto {
+                    display: none;
+                }
+
+                .resumen button {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .areas_experiencia {
+            padding: 1rem;
+
+            .experiencia {
+                .title_experience h3 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

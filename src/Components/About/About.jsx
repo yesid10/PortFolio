@@ -118,6 +118,21 @@ const About = () => {
               Mis areas de experiencia <span></span>
             </h3>
           </div>
+          {/* <div className="tabs_experiencia">
+            {[
+              { key: "skills", label: "Skills" },
+              { key: "experience", label: "Experiencia" },
+              { key: "education", label: "Educación" }
+            ].map(tab => (
+              <button
+                key={tab.key}
+                onClick={() => handleClickAreas(tab.key)}
+                className={selectedAreas === tab.key ? "active" : ""}
+              >
+                {tab.label} <ImArrowUpRight2 style={{ fontSize: "1.5rem", marginLeft: "10px" }} />
+              </button>
+            ))}
+          </div> */}
           <div className="texto">
             <p>
               You can express yourself however you want and whenever you want,
@@ -142,67 +157,29 @@ const About = () => {
               />
             </button>
           </div>
+
         </div>
-        <div className="divSkills">
-          <div>
-            <button
-              onClick={() => handleClickAreas("skills")}
-              style={
-                selectedAreas === "skills"
-                  ? {
-                      border: "1px solid #fff",
-                      padding: "1.1rem 2rem",
-                      borderRadius: "15px",
-                    }
-                  : {}
-              }
-            >
-              Skills
-              <ImArrowUpRight2
-                style={{ fontSize: "1.5rem", marginLeft: "10px" }}
-              />
-            </button>
+
+        <div className="columna_contenido">
+          <div className="tabs_experiencia">
+            {[
+              { key: "skills", label: "Skills" },
+              { key: "experience", label: "Experiencia" },
+              { key: "education", label: "Educación" }
+            ].map(tab => (
+              <button
+                key={tab.key}
+                onClick={() => handleClickAreas(tab.key)}
+                className={selectedAreas === tab.key ? "active" : ""}
+              >
+                {tab.label} <ImArrowUpRight2 style={{ fontSize: "1.5rem", marginLeft: "10px" }} />
+              </button>
+            ))}
+          </div>
+          <div className="contenido_tabs">
             {selectedAreas === "skills" && <Skills />}
-          </div>
-          <div>
-            <button
-              onClick={() => handleClickAreas("experience")}
-              style={
-                selectedAreas === "experience"
-                  ? {
-                      border: "1px solid #fff",
-                      padding: "1.1rem 2rem",
-                      borderRadius: "15px",
-                    }
-                  : {}
-              }
-            >
-              Experiencia
-              <ImArrowUpRight2
-                style={{ fontSize: "1.5rem", marginLeft: "10px" }}
-              />
-            </button>
             {selectedAreas === "experience" && <RepeatComponent info={infoExperience} />}
-          </div>
-          <div>
-            <button
-              onClick={() => handleClickAreas("education")}
-              style={
-                selectedAreas === "education"
-                  ? {
-                      border: "1px solid #fff",
-                      padding: "1.1rem 2rem",
-                      borderRadius: "15px",
-                    }
-                  : {}
-              }
-            >
-              Educación
-              <ImArrowUpRight2
-                style={{ fontSize: "1.5rem", marginLeft: "10px" }}
-              />
-            </button>
-            {selectedAreas === "education" && <RepeatComponent info={infoEducation}/>}
+            {selectedAreas === "education" && <RepeatComponent info={infoEducation} />}
           </div>
         </div>
       </div>
