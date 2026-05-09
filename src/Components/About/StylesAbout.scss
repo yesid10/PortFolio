@@ -6,6 +6,7 @@
     color: #bebdc4;
     min-height: 100vh;
 
+
     .about {
         display: flex;
         width: 100%;
@@ -114,23 +115,19 @@
 
     // ─── SECCIÓN PRINCIPAL CORREGIDA ───────────────────────────────────────
     .areas_experiencia {
-        display: flex;
-        flex-direction: row;
         width: 100%;
+        padding: 0 15% 0 15%;
         min-height: 100vh;
-        align-items: center;
+        display: flex;
+        justify-content: center;
         background-color: $main-color;
-        padding: 2rem 3rem;
-        gap: 3rem;
+        gap: 20%;
 
         // Columna izquierda — título, tabs, texto, botón
         .experiencia {
             display: flex;
             flex-direction: column;
-            flex: 0 0 40%;
-            max-width: 500px;
-
-
+            padding-top: 10rem;
 
             .title_experience {
                 h3 {
@@ -190,16 +187,13 @@
         .columna_contenido {
             display: flex;
             flex-direction: column;
-            flex: 1;
-            align-items: center;
-            justify-content: center;
+            padding-top: 10rem;
 
             .tabs_experiencia {
                 display: flex;
                 flex-direction: row;
-                align-items: center;
                 gap: 0.5rem;
-                flex-wrap: wrap;
+
                 margin-bottom: 1rem;
 
                 button {
@@ -224,9 +218,8 @@
 
             .contenido_tabs {
                 display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
+                width: 20rem;
+
             }
         }
     }
@@ -264,7 +257,7 @@
         .areas_experiencia {
             flex-direction: column;
             min-height: auto;
-            padding: 2rem;
+            // padding: 2rem;
             gap: 2rem;
 
             .experiencia {
