@@ -3,7 +3,7 @@
 
 .educationFuction {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     gap: 1.5rem;
     justify-content: center;
@@ -34,7 +34,7 @@
             font-size: 18px;
             color: #fff;
         }
-        
+
         .grade {
             color: #fff;
             font-weight: 700;
@@ -53,9 +53,17 @@
         .container {
             padding: 1rem;
 
-            .date { font-size: 15px; }
-            .institution { font-size: 16px; }
-            .grade { font-size: 17px; }
+            .date {
+                font-size: 15px;
+            }
+
+            .institution {
+                font-size: 16px;
+            }
+
+            .grade {
+                font-size: 17px;
+            }
         }
     }
 }
@@ -68,9 +76,17 @@
         .container {
             padding: 1rem 0.8rem;
 
-            .date { font-size: 13px; }
-            .institution { font-size: 14px; }
-            .grade { font-size: 15px; }
+            .date {
+                font-size: 13px;
+            }
+
+            .institution {
+                font-size: 14px;
+            }
+
+            .grade {
+                font-size: 15px;
+            }
         }
     }
 }

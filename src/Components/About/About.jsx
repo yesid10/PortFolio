@@ -176,11 +176,11 @@ const About = () => {
               </button>
             ))}
           </div>
-          {/* <div className="contenido_tabs">
+          <div className="contenido_tabs">
             {selectedAreas === "skills" && <Skills />}
             {selectedAreas === "experience" && <RepeatComponent info={infoExperience} />}
             {selectedAreas === "education" && <RepeatComponent info={infoEducation} />}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

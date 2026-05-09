@@ -9,43 +9,43 @@ const Skills = () => {
   const arraySkills = [
     {
       id: 1,
-      icon: <AiOutlineHtml5 style={{color:'#252439'}}/>,
+      icon: <AiOutlineHtml5 style={{ color: '#252439' }} />,
       name: "HTML",
       xp: "90%"
     },
     {
       id: 2,
-      icon: <DiCss3  style={{color:'#252439'}}/>,
+      icon: <DiCss3 style={{ color: '#252439' }} />,
       name: "CSS",
       xp: "85%"
     },
     {
       id: 3,
-      icon: <IoLogoJavascript style={{color:'#252439'}}/>,
+      icon: <IoLogoJavascript style={{ color: '#252439' }} />,
       name: "JavaScript",
       xp: "80%"
     },
     {
       id: 4,
-      icon: <DiReact style={{color:'#252439'}}/>,
+      icon: <DiReact style={{ color: '#252439' }} />,
       name: "React.js",
       xp: "75%"
     },
     {
       id: 5,
-      icon: <SiSpringboot style={{color:'#252439'}}/>,
+      icon: <SiSpringboot style={{ color: '#252439' }} />,
       name: "SpringBoot",
       xp: "70%"
     },
     {
       id: 6,
-      icon: <SiGit style={{color:'#252439'}}/>,
+      icon: <SiGit style={{ color: '#252439', }} />,
       name: "Git",
       xp: "80%"
     },
     {
       id: 7,
-      icon: <SiGithub style={{color:'#252439'}} />,
+      icon: <SiGithub style={{ color: '#252439' }} />,
       name: "GitHub",
       xp: "85%"
     }
@@ -57,7 +57,7 @@ const Skills = () => {
         arraySkills?.map(skill => (
           <div className='icons' key={skill.id}>
             <span className='iconFigure'>{skill.icon}</span>
-            <span className='info'>{skill.name} <span style={{fontWeight:'700'}}>({skill.xp})</span></span> 
+            <span className='info'>{skill.name} <span style={{ fontWeight: '700' }}>({skill.xp})</span></span>
           </div>
         ))
       }
