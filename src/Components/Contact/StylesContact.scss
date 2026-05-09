@@ -5,9 +5,11 @@
 .Contact {
     background-color: #12141d;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__main {
-
         display: flex;
         width: 100%;
         justify-content: space-around;
@@ -51,7 +53,7 @@
             color: #fdfdfd;
             text-align: justify;
 
-            span{
+            span {
                 font-size: 48px;
                 margin-bottom: 1.2rem;
                 font-weight: 700;
@@ -66,7 +68,7 @@
                 font-size: 1rem;
                 font-weight: 300;
                 line-height: 25px;
-                
+
             }
         }
 
@@ -98,7 +100,7 @@
 
     }
 
-    &__footer{
+    &__footer {
 
         display: flex;
         padding: 8rem 0;
@@ -107,16 +109,17 @@
         justify-content: space-around;
         align-items: center;
 
-        .redes{
+        .redes {
             display: flex;
             gap: 1.5rem;
             color: #fff;
 
-            span{
+            span {
                 color: #bebdc4;
                 font-size: 16px;
             }
-            p{
+
+            p {
                 font-size: 25px;
                 font-weight: 500;
                 font-family: $font-family-extra ;

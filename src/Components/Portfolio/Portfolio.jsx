@@ -31,77 +31,77 @@ const Portfolio = () => {
 
     const worksPortfolio = [
         {
-            id: 1,
-            image: imageVuelos,
-            deployment: 'Vercel',
-            title: 'Vuelos',
-            link: 'https://modulo2-sprint3.vercel.app'
-        },
-        {
-            id: 2,
-            image: imageCine,
-            deployment: 'Vercel',
-            title: 'Cine',
-            link: ''
-        },
-        {
-            id: 3,
-            image: ImageLoop,
-            deployment: 'Vercel',
-            title: 'Loop',
-            link: 'https://modulo2-workshop2-tbj7.vercel.app/'
-        },
-        {
-            id: 4,
-            image: ImageMarketplace,
-            deployment: 'Vercel',
-            title: 'Marketplace',
-            link: ''
-        },
-        {
-            id: 5,
-            image: ImagePizaa,
-            deployment: 'Vercel',
-            title: 'Pizza',
-            link: 'https://work-shop2-seprint3.vercel.app/'
-        },
-        {
-            id: 6,
-            image: ImageRappi,
-            deployment: 'Vercel',
-            title: 'Rappi',
-            link: 'https://sprint-4-rappi.firebaseapp.com/'
-        },
-        {
-            id: 7,
-            image: ImageSga,
-            deployment: 'Vercel',
-            title: 'Sistema de gestion de alumnos',
-            link: ''
-        },
-        {
-            id: 8,
-            image: ImageSnap,
-            deployment: 'Vercel',
-            title: 'Snap',
-            link: ''
-        },
-        {
-            id: 9,
+            id: 0,
             image: ImageSpace,
             deployment: 'Vercel',
             title: 'Space',
             link: 'https://workshop-space-tau.vercel.app/'
         },
         {
-            id: 10,
+            id: 1,
             image: ImageTesla,
             deployment: 'Vercel',
             title: 'Tesla',
             link: ''
         },
         {
-            id: 11,
+            id: 2,
+            image: ImageSnap,
+            deployment: 'Vercel',
+            title: 'Snap',
+            link: ''
+        },
+        {
+            id: 3,
+            image: imageVuelos,
+            deployment: 'Vercel',
+            title: 'Vuelos',
+            link: 'https://modulo2-sprint3.vercel.app'
+        },
+        {
+            id: 4,
+            image: ImagePizaa,
+            deployment: 'Vercel',
+            title: 'Pizza',
+            link: 'https://work-shop2-seprint3.vercel.app/'
+        },
+        {
+            id: 5,
+            image: imageCine,
+            deployment: 'Vercel',
+            title: 'Cine',
+            link: ''
+        },
+        {
+            id: 6,
+            image: ImageLoop,
+            deployment: 'Vercel',
+            title: 'Loop',
+            link: 'https://modulo2-workshop2-tbj7.vercel.app/'
+        },
+        {
+            id: 7,
+            image: ImageMarketplace,
+            deployment: 'Vercel',
+            title: 'Marketplace',
+            link: ''
+        },
+        {
+            id: 8,
+            image: ImageRappi,
+            deployment: 'Vercel',
+            title: 'Rappi',
+            link: 'https://sprint-4-rappi.firebaseapp.com/'
+        },
+        {
+            id: 9,
+            image: ImageSga,
+            deployment: 'Vercel',
+            title: 'Sistema de gestion de alumnos',
+            link: ''
+        },
+        {
+            id: 10,
             image: ImageVideotube,
             deployment: 'Vercel',
             title: 'YouTube',

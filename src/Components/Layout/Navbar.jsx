@@ -12,27 +12,22 @@ const Navbar = () => {
     },
     {
       id: 2,
-      name: "About",
+      name: "Sobre mí",
       sectionId: "about",
     },
     {
       id: 3,
-      name: "Service",
+      name: "Servicios",
       sectionId: "service",
     },
     {
       id: 4,
-      name: "Portfolio",
+      name: "Portafolio",
       sectionId: "portfolio",
     },
     {
       id: 5,
-      name: "Blog",
-      sectionId: "home",
-    },
-    {
-      id: 6,
-      name: "Contact",
+      name: "Contacto",
       sectionId: "contact",
     },
   ];
@@ -84,8 +79,8 @@ const Navbar = () => {
       <div className="navbar__menu">
         <ul>
           {listNavbar?.map((item) => (
-            <li 
-              key={item.id} 
+            <li
+              key={item.id}
               onClick={() => handleNavClick(item.sectionId)}
               style={{ borderBottom: activeSection === item.sectionId ? '2px solid #fff' : 'none' }}
             >

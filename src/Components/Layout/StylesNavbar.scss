@@ -12,8 +12,8 @@
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-   
+
+
 
     &__menu {
         display: flex;
@@ -23,7 +23,7 @@
         ul {
             display: flex;
             justify-content: center;
-            gap: 15%;
+            gap: 18%;
 
             li {
                 text-decoration: none;
@@ -32,40 +32,44 @@
                 font-size: 17px;
                 font-weight: 600;
                 cursor: pointer;
+                min-width: fit-content;
 
-                a{
+                a {
                     text-decoration: none;
                     color: #c4c4c4c4;
                 }
 
-                &:hover{
+                &:hover {
                     color: #fff;
                     transition: all 0.3s ease-in-out;
                     border-bottom: 2px solid #fff;
                     padding-bottom: .05rem;
-                }  
-            }   
+                }
+            }
         }
     }
-    &__logo{
+
+    &__logo {
         display: flex;
         justify-content: start;
         justify-content: center;
-        img{
+
+        img {
             display: flex;
             justify-content: start;
             width: 85%;
             padding: 0%;
             margin: 0%;
-            
+
         }
     }
 
-    &__contacto{
+    &__contacto {
         display: flex;
         justify-content: center;
         align-items: center;
-        button{
+
+        button {
             display: flex;
             justify-content: center;
             align-items: center;
